@@ -39,9 +39,12 @@ getSummonerInfo = (summonerName) => {
         })
 }
 
+app.get('/', (req, res) => {
+    res.send('Server is up! Use /summoner-info or /summoner-ingame for info!')
+});
 
 app.get('/ping', (req, res) => {
-    res.send('pong');
+    res.send('pong! It\'s alive!');
 });
 
 app.get('/summoner-info', (req, res, next) => {
